@@ -121,7 +121,7 @@ If you use CALDER in your work, please cite: [ref to be added]
 # Contact information
 
 * Author: Yuanlong LIU
-* Affiliation: Computational Systems Oncology group, Department of Computational Biology, University of Lausanne, Lausanne, Switzerland
+* Affiliation: Computational Systems Oncology group, Department of Computational Biology, University of Lausanne, Switzerland
 * Email: yliueagle@googlemail.com
 
 
