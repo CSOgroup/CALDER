@@ -1,0 +1,34 @@
+Package: CALDER
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2020-09-01
+Author: Yuanlong LIU
+Maintainer: Who to complain to <yliueagle@googlemail.com>
+Description: More about what it does (maybe more than one line)
+LinkingTo: Rcpp, RcppArmadillo
+Authors@R: c(
+    person(given = "Yuanlong",
+           family = "LIU",
+           role = c("aut", "cre"),
+           email = "yliueagle@googlemail.com"))
+URL: https://github.com/YuanlongLiu/CALDER/
+BugReports: https://github.com/YuanlongLiu/CALDER/issues
+License: MIT
+Encoding: UTF-8
+Depends:
+    R (>= 3.5.2)
+Imports: 
+	R.utils (>= 2.9.0),
+	doParallel (>= 1.0.15),
+	ape (>= 5.3),
+	dendextend (>= 1.12.0),
+	fitdistrplus (>= 1.0.14),
+	igraph (>= 1.2.4.1),
+	Matrix (>= 1.2.17),
+	rARPACK (>= 0.11.0),
+	factoextra (>= 1.0.5),
+	maptools (>= 0.9.5),
+	data.table (>= 1.12.2),
+	fields (>= 9.8.3),
+	GenomicRanges (>= 1.36.0)
