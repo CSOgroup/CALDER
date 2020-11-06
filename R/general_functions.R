@@ -1069,11 +1069,11 @@ get_tree_decoration = function( single_res_info, decoration=TRUE, distr, n_param
             return(children)
         }
 
-        hc_dendro = as.dendrogram(hc_object)
+        # hc_dendro = as.dendrogram(hc_object)
         cat('hello I am here\n')
         print(class(hc_dendro))
-        g = igraph::as.igraph(ape::as.phylo(hc_dendro))
-        stop('I am here')
+        g = igraph::as.igraph(ape::as.phylo(hc_object))
+        # stop('I am here')
         leaves = igraph::V(g)[igraph::degree(g)==1]$name
 
         igraph::V(g)$weight = sapply(1:igraph::vcount(g), function(v) aggregateFun(named_weights[get_children(g, v)]))
