@@ -1157,6 +1157,7 @@ get_tree_decoration = function( single_res_info, decoration=TRUE, distr, n_param
         if(k_clusters==Inf) k_clusters = length(labels(as.dendrogram(hc_ordered)))
         #################################################
         graph = igraph::as.igraph(ape::as.phylo(hc_ordered))
+        stop('haha')
         leave_names = get_leaves(graph)
 
         bfs_names = igraph::bfs(graph, 1)$order$name
