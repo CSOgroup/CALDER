@@ -25,7 +25,7 @@
 	contact_mat_processing = function(contact_mat_file, bin_size, bin_size_initial=bin_size)
 	{	
 		
-		compress_size = ifelse(bin_size < 40E3, 10, 1)
+		compress_size = ifelse(bin_size < 40E3, 4, 1)
 		zero_ratio = 0.01
 
 		combined_xk_oe_raw = data.table::fread(contact_mat_file)
