@@ -1070,6 +1070,7 @@ get_tree_decoration = function( single_res_info, decoration=TRUE, distr, n_param
         }
 
         hc_dendro = as.dendrogram(hc_object)
+        cat('haha I am here')
         g = igraph::as.igraph(ape::as.phylo(hc_dendro))
         stop('I am here')
         leaves = igraph::V(g)[igraph::degree(g)==1]$name
@@ -1156,6 +1157,7 @@ get_tree_decoration = function( single_res_info, decoration=TRUE, distr, n_param
 
         if(k_clusters==Inf) k_clusters = length(labels(as.dendrogram(hc_ordered)))
         #################################################
+        cat('haha I am here')
         graph = igraph::as.igraph(ape::as.phylo(hc_ordered))
         stop('haha')
         leave_names = get_leaves(graph)
