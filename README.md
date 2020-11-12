@@ -69,7 +69,7 @@ CALDER_sub_domains(intermediate_data_file, chr, out_dir, bin_size) ## (optional 
 
 * `contact_mat_file`: path to the contact table of a chromosome
 * `chr`: chromosome number. Either numeric or character, will be pasted to the output name
-* `bin_size`: numeric, the size of a bin in consistent with the contact table, numeric
+* `bin_size`: numeric, the size of a bin in consistent with the contact table
 * `out_dir`: the output directory
 * `sub_domains`: logical, whether to compute nested sub-domains
 * `save_intermediate_data`: logical. If TRUE, an intermediate_data will be saved. This file can be used for computing nested sub-domains later on
