@@ -4,7 +4,6 @@
 		CALDER_CD_hierarchy = function(contact_mat_file, chr, bin_size, out_dir, save_intermediate_data=FALSE)
 		{
 	        time0 = Sys.time()
-
 	        log_file = paste0(out_dir, '/chr', chr, '_log.txt')
 
 	        cat('\n')
@@ -195,7 +194,9 @@
 
 				pos_start = (from_id-1)*bin_size + 1
 				pos_end = to_id*bin_size
-				chr = as.numeric( gsub('chr', '', v$chr) )
+				# chr = as.numeric( gsub('chr', '', v$chr) )
+				chr = gsub('chr', '', v$chr) ## no need for as.numeric, also makes it compatible with chrX
+
 				compartment_info_tab = data.frame(chr=rep(unique(chr), length(pos_start)), pos_start=pos_start, pos_end=pos_end, domain=v$comp[borders])
 			}
 			return(compartment_info_tab)
