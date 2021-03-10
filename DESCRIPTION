@@ -1,11 +1,11 @@
 Package: CALDER
 Type: Package
-Title: What the package does (short line)
+Title: CALDER: a Hi-C non-linear hierarchical organization analysis tool
 Version: 1.0
 Date: 2020-09-01
 Author: Yuanlong LIU
 Maintainer: Who to complain to <yliueagle@googlemail.com>
-Description: More about what it does (maybe more than one line)
+Description: CALDER is a Hi-C analysis tool that allows: (1) compute chromatin domains from whole chromosome contacts; (2) derive their non-linear hierarchical organization and obtain sub-compartments; (3) compute nested sub-domains within each chromatin domain from short-range contacts
 LinkingTo: Rcpp, RcppArmadillo
 Authors@R: c(
     person(given = "Yuanlong",
