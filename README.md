@@ -26,7 +26,7 @@ CALDER is a Hi-C analysis tool that allows: (1) compute chromatin domains from w
 
 ## Clone its repository and install it from source:
 
-`git clone https://github.com/YuanlongLiu/CALDER.git`
+`git clone https://github.com/CSOgroup/CALDER.git`
 
 `install.packages(path_to_CALDER, repos = NULL, type="source")` ## install from the cloned source file
 
