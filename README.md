@@ -115,7 +115,7 @@ The saved .bed files can be view directly through IGV:
 
 # Citation
 
-If you use CALDER in your work, please cite: [ref to be added]
+If you use CALDER in your work, please cite: Liu, Y., Nanni, L., Sungalee, S., Zufferey, M., Tavernari, D., Mina, M., ... & Ciriello, G. (2021). Systematic inference and comparison of multi-scale chromatin sub-compartments connects spatial organization to cell phenotypes. Nature Communications, 12(1), 1-11.
 
 
 # Contact information
