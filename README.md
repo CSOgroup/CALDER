@@ -35,9 +35,14 @@ Please contact yliueagle@googlemail.com for any questions about installation.
 
 ## install CALDER and dependencies automaticly:
 
-`install.packages("remotes")`
+`if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 
-`remotes::install_github("CSOgroup/CALDER")`
+BiocManager::install("GenomicRanges")
+
+install.packages("remotes")
+
+remotes::install_github("CSOgroup/CALDER")`
 
 # Usage
 
