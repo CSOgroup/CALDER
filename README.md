@@ -33,7 +33,16 @@ CALDER is a Hi-C analysis tool that allows: (1) compute chromatin domains from w
 
 Please contact yliueagle@googlemail.com for any questions about installation.
 
+## install CALDER and dependencies automaticly:
 
+`if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("GenomicRanges")
+
+install.packages("remotes")
+
+remotes::install_github("CSOgroup/CALDER")`
 
 # Usage
 
