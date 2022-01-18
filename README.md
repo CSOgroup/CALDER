@@ -35,14 +35,14 @@ Please contact yliueagle@googlemail.com for any questions about installation.
 
 ## install CALDER and dependencies automaticly:
 
-`if (!requireNamespace("BiocManager", quietly = TRUE))
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("GenomicRanges")
-
 install.packages("remotes")
-
-remotes::install_github("CSOgroup/CALDER")`
+remotes::install_github("CSOgroup/CALDER")
+```
 
 # Usage
 
@@ -65,13 +65,31 @@ CALDER contains three modules: (1) compute chromatin domains; (2) derive their h
 
 ### To run three modules in a single step:
 ```
-CALDER_main(contact_mat_file, chr, bin_size, out_dir, sub_domains=TRUE, save_intermediate_data=FALSE)
+CALDER_main(contact_mat_file, 
+			chr, 
+			bin_size, 
+			out_dir, 
+			sub_domains=TRUE, 
+			save_intermediate_data=FALSE,
+			genome='hg19')
 ```
 
 ### To run three modules in seperated steps:
 ```
-CALDER_main(contact_mat_file, chr, bin_size, out_dir, sub_domains=FALSE, save_intermediate_data=TRUE) ## will not compute sub-domains, but save the intermediate_data that can be used to compute sub-domains latter on
-CALDER_sub_domains(intermediate_data_file, chr, out_dir, bin_size) ## (optional depends on needs) compute sub-domains using intermediate_data_file that was previous saved in the out_dir (named as chrxx_intermediate_data.Rds)
+# This will not compute sub-domains, but save the intermediate_data that can be used to compute sub-domains latter on
+CALDER_main(contact_mat_file, 
+			chr, 
+			bin_size, 
+			out_dir, 
+			sub_domains=FALSE, 
+			save_intermediate_data=TRUE,
+			genome='hg19') 
+
+# (optional depends on needs) Compute sub-domains using intermediate_data_file that was previous saved in the out_dir (named as chrxx_intermediate_data.Rds)
+CALDER_sub_domains(intermediate_data_file, 
+				   chr, 
+				   out_dir, 
+				   bin_size) 
 ```
 
 ### Paramters:
@@ -82,6 +100,7 @@ CALDER_sub_domains(intermediate_data_file, chr, out_dir, bin_size) ## (optional 
 * `out_dir`: the output directory
 * `sub_domains`: logical, whether to compute nested sub-domains
 * `save_intermediate_data`: logical. If TRUE, an intermediate_data will be saved. This file can be used for computing nested sub-domains later on
+* `genome`: string. Specifies the genome assembly (Default="hg19").
 
 ### Output:
 
