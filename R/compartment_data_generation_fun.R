@@ -32,12 +32,12 @@
 
 		## this code generates the compartment domains
 
-		combined_xk_oe_raw = subset(combined_xk_oe_raw, !is.na(V3))
+		colnames(combined_xk_oe_raw) = c('pos_1', 'pos_2', 'val')
+		combined_xk_oe_raw = subset(combined_xk_oe_raw, !is.na(val))
 		combined_xk_oe_raw[,1] = combined_xk_oe_raw[,1]/bin_size_initial
 		combined_xk_oe_raw[,2] = combined_xk_oe_raw[,2]/bin_size_initial
 		combined_xk_oe = combined_xk_oe_raw
 
-		colnames(combined_xk_oe) = c('pos_1', 'pos_2', 'val')	
 		if(!all(combined_xk_oe[[2]] >= combined_xk_oe[[1]])) stop('\nYou provided matrix does not represent an upper triangular matrix!\n\n')
 
 		oe_size = max(max(combined_xk_oe[[1]]), max(combined_xk_oe[[2]])) + 1 ## should +1 because combined_xk_oe index starts from 0 (bin 0 represents: 0-10E3, checked by looking at the juicebox map, 2018-11-19)
