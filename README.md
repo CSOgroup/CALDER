@@ -11,6 +11,12 @@ CALDER is a Hi-C analysis tool that allows: (1) compute chromatin domains from w
 
 ![Alt text](./img/CALDER_methods.png "CALDER methods")
 
+## (A note on the performance of Calder vs PC-based approach)
+
+* PC1 of the correlation matrix was typically used to define A/B compartment. We found Calder demonstrates superior robustness over PC-based approach in identifying meaningful compartments, particularly when faced with complex chromosomal structural variations (figure on the left) and loose interaction between the p and q arms (figure on the right)
+
+![Alt text](./img/Hela_chr11_and_RWPE1_chr9_pq.png "Hela_chr11_and_RWPE1_chr9_pq")
+
 # Installation
 
 
